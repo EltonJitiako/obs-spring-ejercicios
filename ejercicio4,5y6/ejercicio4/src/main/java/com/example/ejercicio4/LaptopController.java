@@ -1,7 +1,6 @@
 package com.example.ejercicio4;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
@@ -16,13 +15,20 @@ public class LaptopController {
         this.laptopRepository = laptopRepository;
     }
 
-    //CRUD sobre a entidade Book
+    //CRUD
 
-    //Buscar todos os livros
+    //Buscar laptops
     @GetMapping("/api/laptops")
     public List<Laptop> findAll() {
 
         return laptopRepository.findAll();
+    }
+
+    //Crear en la BD
+    @PostMapping("/api/laptops")
+    public Laptop create(@RequestBody Laptop laptop) {
+        return laptopRepository.save(laptop);
+
     }
 
 }
