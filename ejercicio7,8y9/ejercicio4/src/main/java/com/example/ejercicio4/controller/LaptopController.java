@@ -4,10 +4,8 @@ import com.example.ejercicio4.entities.Laptop;
 import com.example.ejercicio4.repository.LaptopRepository;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.annotations.ApiIgnore;
 
 import java.util.List;
 import java.util.Optional;
@@ -47,7 +45,7 @@ public class LaptopController {
     /***** Create a new laptop *****/
     @PostMapping("/api/laptops")
     @ApiOperation("Create a new laptop on DB")
-    public ResponseEntity<Laptop> create(@ApiParam("Parameter object 'laptop'") @RequestBody Laptop laptop, @RequestHeader HttpHeaders headers) {
+    public ResponseEntity<Laptop> create(@ApiParam("Parameter object 'laptop'") @RequestBody Laptop laptop) {
 
         if(laptop.getId()!= null) { //If there is an Id, it is edit and not create
 
