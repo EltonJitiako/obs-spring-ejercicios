@@ -134,6 +134,7 @@ class LaptopControllerTest {
 
     }
 
+    @DisplayName("Try to edit a laptop")
     @Test
     @Order(7)
     void update() {
@@ -160,6 +161,7 @@ class LaptopControllerTest {
 
     }
 
+    @DisplayName("Try to edit a laptop without an existent id")
     @Test
     @Order(8)
     void notUpdate() {
@@ -185,6 +187,7 @@ class LaptopControllerTest {
 
     }
 
+    @DisplayName("Try to edit a laptop with a non-existent id")
     @Test
     @Order(9)
     void notValidIdUpdate() {
@@ -211,6 +214,7 @@ class LaptopControllerTest {
 
     }
 
+    @DisplayName("Try to delete a laptop with a non-existent id")
     @Test
     @Order(10)
     void notDelete() {
@@ -221,6 +225,7 @@ class LaptopControllerTest {
 
     }
 
+    @DisplayName("Try to delete a laptop with a existent id")
     @Test
     @Order(11)
     void delete() {
@@ -249,6 +254,7 @@ class LaptopControllerTest {
 
     }
 
+    @DisplayName("Delete all laptops")
     @Test
     void deleteAll() {
 
