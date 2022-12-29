@@ -1,6 +1,7 @@
 package com.example.ejercicio4.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
 @Table(name = "laptops")
